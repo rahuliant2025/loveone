@@ -1,0 +1,113 @@
+/* ==========================================================================
+   CHAPTER 2 — CINEMATIC BUTTERFLY WEDDING EXPERIENCE
+   Core Design System & Visual Tokens
+   ========================================================================== */
+
+:root {
+  /* --- Primary Color Palette --- */
+  --color-midnight-black: #02040A;
+  --color-midnight-blue: #040714;
+  --color-royal-blue-dark: #070D24;
+  --color-royal-blue-base: #0B173B;
+  --color-royal-blue-rich: #11225B;
+  --color-royal-blue-light: #1A3482;
+
+  /* --- Gold Accents --- */
+  --color-gold-bright: #FFE89E;
+  --color-gold-metallic: #D4AF37;
+  --color-gold-warm: #C59B27;
+  --color-gold-deep: #7D5E13;
+  --gold-gradient: linear-gradient(135deg, #FFF2B2 0%, #D4AF37 45%, #967018 100%);
+  --gold-gradient-soft: linear-gradient(180deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.02) 100%);
+  --gold-border: 1px solid rgba(212, 175, 55, 0.3);
+  --gold-border-glow: 1px solid rgba(255, 232, 158, 0.6);
+
+  /* --- Warm Orange & Sacred Light --- */
+  --color-warm-orange: #FF7B25;
+  --color-warm-amber: #E65C00;
+  --color-candle-glow: rgba(255, 123, 37, 0.25);
+
+  /* --- Subtle Red (Sacred Parampara) --- */
+  --color-subtle-red: #8B1E2D;
+  --color-subtle-crimson: #5C101C;
+  --color-sindoor-glow: rgba(139, 30, 45, 0.2);
+
+  /* --- Central Character: Glowing Blue Butterfly --- */
+  --butterfly-blue-core: #E0F7FF;
+  --butterfly-blue-bright: #00D2FF;
+  --butterfly-blue-vivid: #0088FF;
+  --butterfly-blue-deep: #0044CC;
+  --butterfly-glow-intense: 0 0 25px rgba(0, 210, 255, 0.9), 0 0 50px rgba(0, 136, 255, 0.6);
+  --butterfly-glow-ambient: 0 0 80px rgba(0, 136, 255, 0.3);
+
+  /* --- Neutral & Typography Colors --- */
+  --color-text-primary: #FAF8F2;
+  --color-text-secondary: #D2D8E6;
+  --color-text-muted: #8491A8;
+  --color-text-gold: #E8D38A;
+
+  /* --- Typography Families --- */
+  --font-royal: 'Cinzel', serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Montserrat', system-ui, -apple-system, sans-serif;
+
+  /* --- Cinematic Depth & Lighting Shadows --- */
+  --shadow-cinematic: 0 24px 60px rgba(0, 0, 0, 0.85);
+  --shadow-gold-glow: 0 0 30px rgba(212, 175, 55, 0.25);
+  --vignette-radial: radial-gradient(circle at 50% 40%, transparent 40%, rgba(2, 4, 10, 0.85) 90%, #02040A 100%);
+  --vignette-cinematic-edge: linear-gradient(180deg, rgba(2, 4, 10, 0.6) 0%, transparent 15%, transparent 85%, #02040A 100%);
+
+  /* --- Mobile-First Layout Tokens --- */
+  --mobile-app-max-width: 480px;
+  --mobile-aspect-ratio: 9 / 16;
+  --ease-cinematic: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-flutter: cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--color-midnight-black);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  background: var(--color-midnight-black);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Mobile-First Shell Constraint for Desktop & Mobile Viewing */
+.cinematic-stage-wrapper {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  background: radial-gradient(ellipse at 50% 15%, #0D1C48 0%, #060E28 40%, #02040A 100%);
+}
+
+@media (min-width: 768px) {
+  .cinematic-stage-wrapper {
+    max-width: 520px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.95), 0 0 60px rgba(7, 13, 36, 0.8);
+    border-left: 1px solid rgba(212, 175, 55, 0.2);
+    border-right: 1px solid rgba(212, 175, 55, 0.2);
+  }
+}

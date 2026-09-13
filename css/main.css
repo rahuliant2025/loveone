@@ -1,0 +1,1691 @@
+/* ==========================================================================
+   CHAPTER 2 — CINEMATIC BUTTERFLY WEDDING EXPERIENCE
+   Main Stylesheet: Omni Video Hero, Butterfly Stage & All Story Chapters
+   ========================================================================== */
+
+@import './design-system.css';
+
+/* --- Cinematic Ambient Drifting Golden Fireflies Layer --- */
+.ambient-fireflies-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.firefly {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, #FFFFFF 0%, #FFE89E 35%, #D4AF37 70%, transparent 100%);
+  box-shadow: 0 0 10px #FFE89E, 0 0 20px #D4AF37;
+  pointer-events: none;
+  opacity: 0;
+  animation: fireflyGlow 3.5s ease-in-out infinite alternate, fireflyDrift 16s linear infinite;
+}
+
+.firefly-1 { top: 12%; left: 8%; width: 4px; height: 4px; animation-delay: 0.2s, 0s; animation-duration: 3s, 14s; }
+.firefly-2 { top: 28%; left: 88%; width: 3px; height: 3px; animation-delay: 1.2s, 2s; animation-duration: 4s, 18s; }
+.firefly-3 { top: 44%; left: 16%; width: 5px; height: 5px; animation-delay: 0.8s, 4s; animation-duration: 3.2s, 15s; }
+.firefly-4 { top: 62%; left: 82%; width: 4px; height: 4px; animation-delay: 2.1s, 1s; animation-duration: 3.8s, 19s; }
+.firefly-5 { top: 76%; left: 22%; width: 3px; height: 3px; animation-delay: 1.5s, 5s; animation-duration: 4.2s, 16s; }
+.firefly-6 { top: 88%; left: 74%; width: 4px; height: 4px; animation-delay: 0.5s, 3s; animation-duration: 3.6s, 17s; }
+.firefly-7 { top: 18%; left: 78%; width: 3px; height: 3px; animation-delay: 2.8s, 6s; animation-duration: 4.5s, 20s; }
+.firefly-8 { top: 35%; left: 25%; width: 4px; height: 4px; animation-delay: 1.7s, 2.5s; animation-duration: 3.4s, 13s; }
+.firefly-9 { top: 52%; left: 92%; width: 3px; height: 3px; animation-delay: 0.9s, 4.2s; animation-duration: 4.1s, 18s; }
+.firefly-10 { top: 68%; left: 10%; width: 5px; height: 5px; animation-delay: 2.3s, 0.8s; animation-duration: 3.7s, 16s; }
+.firefly-11 { top: 82%; left: 85%; width: 3px; height: 3px; animation-delay: 1.1s, 3.7s; animation-duration: 3.9s, 15s; }
+.firefly-12 { top: 94%; left: 30%; width: 4px; height: 4px; animation-delay: 2.5s, 1.9s; animation-duration: 4.3s, 21s; }
+
+@keyframes fireflyGlow {
+  0% { opacity: 0.1; transform: scale(0.6); }
+  50% { opacity: 0.85; transform: scale(1.3); }
+  100% { opacity: 0.2; transform: scale(0.8); }
+}
+
+@keyframes fireflyDrift {
+  0% { transform: translateY(0) translateX(0); }
+  25% { transform: translateY(-25px) translateX(15px); }
+  50% { transform: translateY(-45px) translateX(-12px); }
+  75% { transform: translateY(-70px) translateX(18px); }
+  100% { transform: translateY(-95px) translateX(0); }
+}
+
+/* ==========================================================================
+   CINEMATIC STARDUST CANVAS & AUSPICIOUS FALLING PETALS
+   ========================================================================== */
+.butterfly-sparkle-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 10002; /* Directly rendering over elements for maximum stardust brilliance */
+}
+
+/* Auspicious Falling Rose & Marigold Petals Layer (पुष्प वर्षा) */
+.cinematic-petals-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.petal {
+  position: absolute;
+  top: -45px;
+  border-radius: 65% 0 65% 55%;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+  animation: petalDriftFall linear infinite;
+}
+
+.petal-rose {
+  background: radial-gradient(circle at 35% 35%, #FF2A55 0%, #B80D2D 60%, #4D0011 100%);
+  box-shadow: 0 0 12px rgba(255, 42, 85, 0.45);
+}
+
+.petal-marigold {
+  background: radial-gradient(circle at 35% 35%, #FFE169 0%, #FFB703 60%, #D97706 100%);
+  box-shadow: 0 0 14px rgba(255, 183, 3, 0.55);
+}
+
+.petal-1  { left: 6%;  width: 15px; height: 11px; animation-duration: 15s; animation-delay: 0s; }
+.petal-2  { left: 88%; width: 12px; height: 10px; animation-duration: 18s; animation-delay: 2s; }
+.petal-3  { left: 24%; width: 17px; height: 13px; animation-duration: 14s; animation-delay: 5s; }
+.petal-4  { left: 72%; width: 13px; height: 10px; animation-duration: 17s; animation-delay: 1.5s; }
+.petal-5  { left: 45%; width: 16px; height: 12px; animation-duration: 16s; animation-delay: 7s; }
+.petal-6  { left: 15%; width: 13px; height: 9px;  animation-duration: 19s; animation-delay: 3.5s; }
+.petal-7  { left: 92%; width: 17px; height: 13px; animation-duration: 13s; animation-delay: 6s; }
+.petal-8  { left: 35%; width: 14px; height: 10px; animation-duration: 16.5s; animation-delay: 8.5s; }
+.petal-9  { left: 62%; width: 15px; height: 11px; animation-duration: 15.5s; animation-delay: 4s; }
+.petal-10 { left: 80%; width: 12px; height: 9px;  animation-duration: 20s; animation-delay: 9s; }
+.petal-11 { left: 18%; width: 16px; height: 12px; animation-duration: 14.5s; animation-delay: 11s; }
+.petal-12 { left: 52%; width: 13px; height: 10px; animation-duration: 17.5s; animation-delay: 2.8s; }
+.petal-13 { left: 84%; width: 15px; height: 11px; animation-duration: 16s; animation-delay: 12s; }
+.petal-14 { left: 28%; width: 14px; height: 10px; animation-duration: 18.5s; animation-delay: 6.8s; }
+.petal-15 { left: 68%; width: 16px; height: 12px; animation-duration: 13.5s; animation-delay: 10.5s; }
+.petal-16 { left: 40%; width: 13px; height: 9px;  animation-duration: 19.5s; animation-delay: 1s; }
+
+@keyframes petalDriftFall {
+  0% {
+    transform: translateY(-5vh) translateX(0) rotateZ(0deg) rotateX(0deg) rotateY(0deg);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(105vh) translateX(70px) rotateZ(380deg) rotateX(180deg) rotateY(360deg);
+    opacity: 0;
+  }
+}
+
+/* ==========================================================================
+   1. CINEMATIC HERO VIDEO VIEWPORT
+   ========================================================================== */
+.hero-cinematic-stage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  background: #000;
+}
+
+.hero-video-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-omni-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+/* Atmospheric Night Lighting Overlays */
+.hero-ambient-lights {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.ambient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.ambient-orb-top {
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(17, 34, 91, 0.5) 0%, rgba(11, 23, 59, 0.2) 60%, transparent 80%);
+}
+
+.ambient-orb-warm {
+  bottom: 25%;
+  right: 10%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, var(--color-candle-glow) 0%, transparent 70%);
+}
+
+.hero-video-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 35%, transparent 45%, rgba(2, 4, 10, 0.7) 90%, #02040A 100%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Bottom blend gradient: smoothly hides bottom video AI text artifact and blends into story */
+.hero-bottom-blend-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 180px;
+  background: linear-gradient(to top, 
+    var(--color-midnight-black) 0%, 
+    rgba(2, 4, 10, 0.95) 30%, 
+    rgba(2, 4, 10, 0.6) 65%, 
+    transparent 100%);
+  pointer-events: none;
+  z-index: 4;
+}
+
+/* Hero Interactive Overlay & Scroll Prompt */
+.hero-interactive-overlay {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  pointer-events: auto;
+}
+
+.hero-couple-subtitle {
+  font-family: var(--font-serif);
+  font-size: clamp(12px, 3.2vw, 15px);
+  letter-spacing: 0.22em;
+  color: var(--color-gold-bright);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.hero-scroll-cue {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: var(--color-text-gold);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 8px 20px;
+  border-radius: 999px;
+  background: rgba(7, 13, 36, 0.75);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7), 0 0 15px rgba(212, 175, 55, 0.2);
+  transition: all 0.3s ease;
+}
+
+.hero-scroll-cue:hover {
+  background: rgba(17, 34, 91, 0.9);
+  border-color: var(--color-gold-bright);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+  transform: translateY(-2px);
+}
+
+.scroll-cue-arrow {
+  font-size: 14px;
+  color: var(--color-gold-bright);
+  animation: cueBounce 1.8s ease-in-out infinite;
+}
+
+@keyframes cueBounce {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(5px); opacity: 1; }
+}
+
+/* ==========================================================================
+   2. CENTRAL STORYTELLER: GLOWING BLUE BUTTERFLY
+   ========================================================================== */
+.butterfly-flight-stage {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10000;
+  overflow: visible;
+}
+
+.blue-butterfly-entity {
+  position: fixed;
+  width: 58px;
+  height: 48px;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+  filter: drop-shadow(0 0 8px #00D2FF) 
+          drop-shadow(0 0 20px rgba(0, 136, 255, 0.5));
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 10001;
+  opacity: 0; /* Activated during handoff or scroll */
+  transition: opacity 0.4s ease;
+}
+
+.butterfly-wings-cage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.blue-butterfly-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Wing Flap Animations */
+.blue-wing-left {
+  transform-origin: 50px 42px;
+  animation: blueWingFlapLeft 0.36s ease-in-out infinite alternate;
+}
+
+.blue-wing-right {
+  transform-origin: 50px 42px;
+  animation: blueWingFlapRight 0.36s ease-in-out infinite alternate;
+}
+
+@keyframes blueWingFlapLeft {
+  0% { transform: scaleX(1) rotate(0deg); }
+  100% { transform: scaleX(0.12) rotate(-10deg) skewY(-12deg); }
+}
+
+@keyframes blueWingFlapRight {
+  0% { transform: scaleX(1) rotate(0deg); }
+  100% { transform: scaleX(0.12) rotate(10deg) skewY(12deg); }
+}
+
+/* In Fast Flight (During Scroll) - Smooth & Graceful Flutter */
+.blue-butterfly-entity.flying .blue-wing-left {
+  animation: blueWingFlapLeft 0.20s ease-in-out infinite alternate;
+}
+.blue-butterfly-entity.flying .blue-wing-right {
+  animation: blueWingFlapRight 0.20s ease-in-out infinite alternate;
+}
+
+/* Calm Hovering State */
+.blue-butterfly-entity.hovering .blue-wing-left,
+.blue-butterfly-entity.hovering .blue-wing-right {
+  animation-duration: 0.55s;
+}
+
+/* Gracefully Perched on a Word */
+.blue-butterfly-entity.perched {
+  filter: drop-shadow(0 0 8px #00D2FF) 
+          drop-shadow(0 0 16px rgba(0, 210, 255, 0.6));
+}
+
+.blue-butterfly-entity.perched .blue-wing-left {
+  animation: blueWingPerchLeft 1.3s ease-in-out infinite alternate;
+}
+
+.blue-butterfly-entity.perched .blue-wing-right {
+  animation: blueWingPerchRight 1.3s ease-in-out infinite alternate;
+}
+
+@keyframes blueWingPerchLeft {
+  0% { transform: scaleX(0.55) rotate(-6deg) skewY(-4deg); }
+  100% { transform: scaleX(0.38) rotate(-14deg) skewY(-8deg); }
+}
+
+@keyframes blueWingPerchRight {
+  0% { transform: scaleX(0.55) rotate(6deg) skewY(4deg); }
+  100% { transform: scaleX(0.38) rotate(14deg) skewY(8deg); }
+}
+
+/* --- Interactive Word Landing Targets (Never Fade, Always Sharp & Visible) --- */
+.butterfly-perch-word {
+  display: inline-block;
+  position: relative;
+  opacity: 1 !important;
+  visibility: visible !important;
+  color: inherit;
+  -webkit-text-fill-color: initial;
+  transition: text-shadow 0.3s ease;
+}
+
+/* Ensure headings with background-clip: text don't make perched words transparent */
+.chapter-title .butterfly-perch-word,
+.closing-headline .butterfly-perch-word,
+.gold-title .butterfly-perch-word {
+  color: #FFE082 !important;
+  -webkit-text-fill-color: #FFE082 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* When the glowing blue butterfly lands on this word: NEVER fade, keep 100% clear */
+.butterfly-perch-word.perched-word-active {
+  opacity: 1 !important;
+  visibility: visible !important;
+  text-shadow: 0 0 6px rgba(255, 224, 130, 0.7), 0 0 12px rgba(212, 175, 55, 0.4) !important;
+}
+
+.butterfly-perch-word.perched-word-active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent 0%, #00D2FF 30%, #FFE89E 70%, transparent 100%);
+  box-shadow: 0 0 6px rgba(0, 210, 255, 0.7), 0 0 10px rgba(255, 232, 158, 0.7);
+  animation: wordShimmer 1.6s ease-in-out infinite alternate;
+}
+
+@keyframes wordShimmer {
+  0% { opacity: 0.6; transform: scaleX(0.85); }
+  100% { opacity: 1; transform: scaleX(1.05); }
+}
+
+/* Glowing Blue Fairy Dust Particles */
+.blue-sparkle-mote {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #FFFFFF 0%, #00D2FF 50%, transparent 100%);
+  box-shadow: 0 0 10px #00D2FF, 0 0 20px #0088FF;
+  pointer-events: none;
+  animation: moteFade 1s cubic-bezier(0.2, 0.8, 0.4, 1) forwards;
+  z-index: 9999;
+}
+
+@keyframes moteFade {
+  0% { opacity: 1; transform: scale(1.3) translateY(0); }
+  100% { opacity: 0; transform: scale(0.2) translateY(20px); }
+}
+
+/* ==========================================================================
+   3. STORY CHAPTER SECTIONS (GENERAL)
+   ========================================================================== */
+.story-chapter-section {
+  position: relative;
+  width: 100%;
+  padding: 85px 22px 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+  overflow: hidden;
+  background: radial-gradient(ellipse at 50% 30%, #081232 0%, #030714 80%, #02040A 100%);
+}
+
+/* Alternating subtle lighting depth with warm volumetric golden wash */
+.story-chapter-section {
+  position: relative;
+  width: 100%;
+  padding: 85px 22px 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  overflow: hidden;
+  background: 
+    radial-gradient(ellipse at 50% 0%, rgba(255, 220, 130, 0.12) 0%, transparent 65%),
+    radial-gradient(ellipse at 50% 30%, #0A163E 0%, #04091A 80%, #02040A 100%);
+}
+
+.story-chapter-section:nth-of-type(even) {
+  background: 
+    radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, 0.14) 0%, transparent 65%),
+    radial-gradient(ellipse at 50% 30%, #0D1C4C 0%, #060F2B 80%, #02040A 100%);
+}
+
+/* Faded Romantic Bride & Groom Glimpses — Prominently Visible with Warm Golden Screen Aura */
+.section-faded-glimpse {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.28; /* Brighter and clearly visible */
+  mix-blend-mode: screen;
+  filter: contrast(1.18) brightness(1.15) sepia(0.18);
+  pointer-events: none;
+  z-index: 1;
+  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.95) 0%, transparent 85%);
+  -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.95) 0%, transparent 85%);
+}
+
+/* Side framing glimpses for the Timeline section (Bride & Groom) */
+.timeline-glimpse-bride {
+  position: absolute;
+  top: 5%;
+  right: -15px;
+  width: 220px;
+  height: 380px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.35; /* Prominently visible framing */
+  mix-blend-mode: screen;
+  filter: contrast(1.22) brightness(1.18) sepia(0.2);
+  pointer-events: none;
+  z-index: 1;
+  mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.9) 0%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.9) 0%, transparent 80%);
+}
+
+.timeline-glimpse-groom {
+  position: absolute;
+  bottom: 5%;
+  left: -15px;
+  width: 220px;
+  height: 380px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.35; /* Prominently visible framing */
+  mix-blend-mode: screen;
+  filter: contrast(1.22) brightness(1.18) sepia(0.2);
+  pointer-events: none;
+  z-index: 1;
+  mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.9) 0%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.9) 0%, transparent 80%);
+}
+
+/* Section Headings & Badges */
+.chapter-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 20px;
+  border-radius: 999px;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(255, 232, 158, 0.5);
+  font-family: var(--font-royal);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-gold-bright);
+  margin-bottom: 16px;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
+  position: relative;
+  z-index: 2;
+}
+
+.chapter-title {
+  font-family: var(--font-royal);
+  font-size: clamp(24px, 6.5vw, 34px);
+  font-weight: 700;
+  line-height: 1.25;
+  background: linear-gradient(135deg, #FFF8DC 0%, #FFE082 25%, #D4AF37 50%, #FFF2B2 75%, #9E7818 100%);
+  background-size: 240% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldShimmerSweep 5s ease-in-out infinite alternate;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 22px rgba(212, 175, 55, 0.4));
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes goldShimmerSweep {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.chapter-lead {
+  font-family: var(--font-serif);
+  font-size: clamp(15px, 3.8vw, 18px);
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  max-width: 440px;
+  margin: 0 auto 30px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================================================================
+   ROYAL COUPLE PORTRAIT MEDALLION (RAHUL ❤️ SHRISTI)
+   ========================================================================== */
+.royal-couple-portrait-medallion {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.medallion-frame-outer {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.medallion-glow-aura {
+  position: absolute;
+  inset: -14px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 232, 158, 0.45) 0%, rgba(212, 175, 55, 0.22) 50%, transparent 75%);
+  filter: blur(12px);
+  animation: medallionPulse 3.5s ease-in-out infinite alternate;
+}
+
+.medallion-frame-inner {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--color-gold-bright);
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.65), inset 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.medallion-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  filter: contrast(1.1) brightness(1.04);
+  transition: transform 0.6s ease;
+}
+
+.medallion-portrait-img:hover {
+  transform: scale(1.08);
+}
+
+.medallion-warm-vignette {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, transparent 55%, rgba(20, 10, 0, 0.4) 85%, rgba(0, 0, 0, 0.75) 100%);
+  pointer-events: none;
+}
+
+.medallion-crest-badge {
+  position: absolute;
+  bottom: -6px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFE89E 0%, #D4AF37 50%, #967018 100%);
+  border: 2px solid #FFF;
+  color: #050D24;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255, 232, 158, 0.85);
+}
+
+.medallion-shubh-tag {
+  display: inline-block;
+  font-family: var(--font-royal);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  color: var(--color-gold-bright);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  text-shadow: 0 0 12px rgba(212, 175, 55, 0.7);
+}
+
+.medallion-couple-title {
+  font-family: var(--font-royal);
+  font-size: clamp(22px, 5.5vw, 28px);
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.9), 0 0 22px rgba(212, 175, 55, 0.45);
+}
+
+.gold-heart {
+  color: #FF4D6D;
+  display: inline-block;
+  animation: heartThrob 1.6s ease-in-out infinite;
+}
+
+@keyframes heartThrob {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+
+.medallion-blessing-line {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--color-text-gold);
+  line-height: 1.5;
+  max-width: 360px;
+}
+
+@keyframes medallionPulse {
+  0% { transform: scale(0.96); opacity: 0.65; }
+  100% { transform: scale(1.08); opacity: 1; }
+}
+
+/* Royal Glassmorphic Cards — 24K Gold Specular Rim & Velvet Glow */
+.royal-glass-card {
+  background: linear-gradient(165deg, rgba(14, 26, 68, 0.88) 0%, rgba(6, 12, 34, 0.95) 100%);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 20px;
+  padding: 30px 24px;
+  box-shadow: 
+    0 24px 60px rgba(0, 0, 0, 0.8),
+    0 0 35px rgba(212, 175, 55, 0.2),
+    inset 0 1px 2px rgba(255, 235, 160, 0.45),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.royal-glass-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 232, 158, 0.7);
+  box-shadow: 
+    0 30px 70px rgba(0, 0, 0, 0.85),
+    0 0 45px rgba(212, 175, 55, 0.35),
+    inset 0 1px 3px rgba(255, 235, 160, 0.6);
+}
+
+/* ==========================================================================
+   4. CHAPTER 2.1 — SACRED HARMONY CARDS
+   ========================================================================== */
+.harmony-cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  width: 100%;
+  max-width: 440px;
+  position: relative;
+  z-index: 2;
+}
+
+.card-icon-crest {
+  width: 46px;
+  height: 46px;
+  margin: 0 auto 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  font-size: 20px;
+  color: var(--color-gold-bright);
+  box-shadow: 0 0 18px rgba(212, 175, 55, 0.25);
+}
+
+.card-title {
+  font-family: var(--font-royal);
+  font-size: 20px;
+  color: var(--color-gold-bright);
+  margin-bottom: 6px;
+}
+
+.card-tagline {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-text-gold);
+  opacity: 0.85;
+  margin-bottom: 12px;
+}
+
+.card-body-text {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+  margin-bottom: 16px;
+}
+
+.card-mantra-pill {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(7, 13, 36, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  font-size: 12px;
+  color: var(--color-gold-bright);
+  letter-spacing: 0.08em;
+}
+
+/* ==========================================================================
+   5. CHAPTER 2.2 — FAMILY PILLARS
+   ========================================================================== */
+.family-pillars-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 440px;
+  position: relative;
+  z-index: 2;
+}
+
+.family-pillar-card {
+  background: linear-gradient(165deg, rgba(14, 26, 68, 0.88) 0%, rgba(6, 12, 34, 0.95) 100%);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 18px;
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: 
+    0 18px 45px rgba(0, 0, 0, 0.75),
+    0 0 25px rgba(212, 175, 55, 0.16),
+    inset 0 1px 2px rgba(255, 235, 160, 0.4);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.family-pillar-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 232, 158, 0.7);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.85), 0 0 35px rgba(212, 175, 55, 0.3);
+}
+
+.family-pillar-label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold-bright);
+  opacity: 0.9;
+  margin-bottom: 8px;
+}
+
+.family-parents-names {
+  font-family: var(--font-royal);
+  font-size: 18px;
+  color: #FFF;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.family-home-note {
+  font-size: 12px;
+  color: var(--color-text-gold);
+}
+
+.family-center-emblem {
+  color: var(--color-subtle-red);
+  font-size: 16px;
+  margin: 2px 0;
+  filter: drop-shadow(0 0 10px rgba(139, 30, 45, 0.8));
+}
+
+/* ==========================================================================
+   6. CHAPTER 2.3 — CELEBRATIONS TIMELINE STREAM
+   ========================================================================== */
+.timeline-journey-stream {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  padding: 10px 0 10px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  z-index: 2;
+  text-align: left;
+}
+
+.timeline-path-line {
+  position: absolute;
+  left: 14px;
+  top: 15px;
+  bottom: 15px;
+  width: 2px;
+  background: linear-gradient(180deg, 
+    rgba(212, 175, 55, 0.1) 0%, 
+    rgba(212, 175, 55, 0.7) 45%, 
+    rgba(0, 210, 255, 0.6) 75%, 
+    rgba(212, 175, 55, 0.1) 100%);
+}
+
+.timeline-event-card {
+  position: relative;
+  width: 100%;
+}
+
+.event-marker-dot {
+  position: absolute;
+  left: -32px;
+  top: 16px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #070D24;
+  border: 1.5px solid var(--color-gold-metallic);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
+  z-index: 3;
+}
+
+.event-marker-dot.crown-dot {
+  border-color: #FFE89E;
+  background: #14265E;
+  box-shadow: 0 0 20px rgba(255, 232, 158, 0.8);
+}
+
+.event-card-inner {
+  background: linear-gradient(165deg, rgba(14, 26, 68, 0.88) 0%, rgba(6, 12, 34, 0.95) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.38);
+  border-radius: 18px;
+  padding: 20px 18px;
+  box-shadow: 
+    0 16px 40px rgba(0, 0, 0, 0.65),
+    0 0 20px rgba(212, 175, 55, 0.12),
+    inset 0 1px 1px rgba(255, 235, 160, 0.35);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.event-card-inner:hover {
+  transform: translateX(5px);
+  border-color: rgba(255, 232, 158, 0.65);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.75), 0 0 30px rgba(212, 175, 55, 0.25);
+}
+
+.highlight-glow {
+  border: 1.5px solid rgba(255, 232, 158, 0.55);
+  background: linear-gradient(145deg, rgba(17, 34, 91, 0.85) 0%, rgba(11, 23, 59, 0.75) 100%);
+  box-shadow: 0 0 35px rgba(212, 175, 55, 0.25), 0 15px 35px rgba(0, 0, 0, 0.7);
+}
+
+.auspicious-ribbon {
+  display: inline-block;
+  background: linear-gradient(90deg, #D4AF37, #FFE89E);
+  color: #02040A;
+  font-family: var(--font-royal);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.event-time-badge {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold-bright);
+  margin-bottom: 6px;
+}
+
+.event-name {
+  font-family: var(--font-royal);
+  font-size: 17px;
+  color: #FFF;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.gold-title {
+  color: var(--color-gold-bright);
+}
+
+.event-desc {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+  margin-bottom: 12px;
+}
+
+.event-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.event-venue-pill {
+  font-size: 11px;
+  color: var(--color-text-gold);
+  background: rgba(7, 13, 36, 0.65);
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.gold-pill {
+  border-color: rgba(255, 232, 158, 0.4);
+  background: rgba(20, 38, 94, 0.65);
+}
+
+.cal-sync-btn {
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: var(--color-gold-bright);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: var(--font-sans);
+}
+
+.cal-sync-btn:hover {
+  background: rgba(212, 175, 55, 0.3);
+  border-color: var(--color-gold-bright);
+}
+
+.primary-cal-btn {
+  background: linear-gradient(135deg, #D4AF37, #967018);
+  color: #02040A;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
+}
+
+.primary-cal-btn:hover {
+  background: linear-gradient(135deg, #FFE89E, #C59B27);
+}
+
+/* ==========================================================================
+   7. CHAPTER 2.4 — VENUES & GPS NAVIGATION
+   ========================================================================== */
+.venues-cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 440px;
+  position: relative;
+  z-index: 2;
+}
+
+.venue-card {
+  text-align: center;
+}
+
+.venue-crest {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: var(--color-gold-bright);
+}
+
+.venue-role-tag {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-gold-bright);
+  background: rgba(212, 175, 55, 0.1);
+  padding: 3px 12px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.venue-name {
+  font-family: var(--font-royal);
+  font-size: 22px;
+  color: #FFF;
+  margin-bottom: 8px;
+}
+
+.venue-address {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+.venue-timing-note {
+  font-size: 12px;
+  color: var(--color-text-gold);
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.venue-map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  color: var(--color-gold-bright);
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  transition: all 0.3s ease;
+}
+
+.venue-map-link:hover {
+  background: rgba(212, 175, 55, 0.3);
+  border-color: var(--color-gold-bright);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+/* ==========================================================================
+   8. CHAPTER 2.5 — COUNTDOWN TO FOREVER
+   ========================================================================== */
+.countdown-dials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+  max-width: 420px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 20px;
+}
+
+.countdown-dial-box {
+  background: rgba(11, 23, 59, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  border-radius: 16px;
+  padding: 16px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease;
+}
+
+.countdown-dial-box:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-gold-bright);
+}
+
+.dial-number {
+  font-family: var(--font-royal);
+  font-size: clamp(24px, 6vw, 32px);
+  font-weight: 700;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.dial-label {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.countdown-date-badge {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  font-style: italic;
+  color: var(--color-text-gold);
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================================================================
+   9. CHAPTER 2.6 — RSVP & WHATSAPP FORM
+   ========================================================================== */
+.rsvp-form-container {
+  width: 100%;
+  max-width: 440px;
+  position: relative;
+  z-index: 2;
+}
+
+.royal-rsvp-form {
+  background: rgba(11, 23, 59, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 20px;
+  padding: 26px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row label {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold-bright);
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  background: rgba(4, 7, 20, 0.75);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 10px;
+  color: #FFF;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  padding: 12px 14px;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  width: 100%;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  border-color: var(--color-gold-bright);
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
+}
+
+.whatsapp-send-btn {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #FFF;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  margin-top: 6px;
+  font-family: var(--font-sans);
+}
+
+.whatsapp-send-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+}
+
+/* ==========================================================================
+   10. CHAPTER 2.7 — FORWARD & SHARE UTILITY
+   ========================================================================== */
+.share-utility-card {
+  background: rgba(11, 23, 59, 0.7);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 20px;
+  padding: 28px 20px;
+  width: 100%;
+  max-width: 440px;
+  text-align: center;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 2;
+}
+
+.share-icon {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.share-title {
+  font-family: var(--font-royal);
+  font-size: 20px;
+  color: var(--color-gold-bright);
+  margin-bottom: 8px;
+}
+
+.share-desc {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+  margin-bottom: 20px;
+}
+
+.share-actions-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.share-btn {
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.25s ease;
+  font-family: var(--font-sans);
+}
+
+.primary-share-btn {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #FFF;
+  border: none;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+}
+
+.primary-share-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.45);
+}
+
+.secondary-share-btn {
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--color-gold-bright);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.secondary-share-btn:hover {
+  background: rgba(212, 175, 55, 0.25);
+  border-color: var(--color-gold-bright);
+}
+
+.copy-hint {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin-bottom: 8px;
+}
+
+.copy-message-btn {
+  background: transparent;
+  border: 1px dashed rgba(212, 175, 55, 0.4);
+  color: var(--color-text-gold);
+  font-size: 12px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: var(--font-sans);
+}
+
+.copy-message-btn:hover {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: var(--color-gold-bright);
+}
+
+/* ==========================================================================
+   11. CHAPTER 2.8 — CLOSING ROYAL FOOTER
+   ========================================================================== */
+.closing-royal-footer {
+  position: relative;
+  padding: 90px 22px 70px;
+  text-align: center;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(ellipse at 50% 30%, #0D1C48 0%, #060E28 50%, #02040A 100%);
+}
+
+.closing-dhamma-crest {
+  font-size: 36px;
+  color: var(--color-gold-bright);
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.5));
+}
+
+.closing-pali-verse {
+  font-family: var(--font-royal);
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  color: var(--color-gold-bright);
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 2;
+}
+
+.closing-headline {
+  font-family: var(--font-royal);
+  font-size: clamp(24px, 6.5vw, 34px);
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.25;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 2;
+}
+
+.closing-subtext {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  max-width: 420px;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.closing-names-signature {
+  font-family: var(--font-royal);
+  font-size: clamp(28px, 7vw, 38px);
+  color: var(--color-gold-bright);
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.closing-names-signature i {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--color-gold-metallic);
+  padding: 0 4px;
+}
+
+.closing-date-mark {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: var(--color-text-gold);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.closing-family-compliments {
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  padding-top: 16px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+  position: relative;
+  z-index: 2;
+}
+
+.closing-family-compliments strong {
+  display: block;
+  color: var(--color-gold-bright);
+  margin-top: 4px;
+  font-size: 13px;
+}
+
+.made-by-rahul-credit {
+  margin-top: 22px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(212, 175, 55, 0.25);
+  font-family: var(--font-royal);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-gold-bright);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.made-by-rahul-credit .heart-pulse {
+  display: inline-block;
+  font-size: 14px;
+  animation: heartPulse 1.4s ease-in-out infinite;
+  filter: drop-shadow(0 0 6px rgba(255, 75, 75, 0.8));
+  vertical-align: middle;
+}
+
+@keyframes heartPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+
+/* ==========================================================================
+   12. INTERACTIVE UTILITIES (BACK-TO-TOP & TOAST)
+   ========================================================================== */
+/* ==========================================================================
+   FLOATING CINEMATIC MUSIC CONTROL (RANJHA)
+   ========================================================================== */
+.floating-music-btn {
+  position: fixed;
+  top: 22px;
+  right: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(7, 13, 36, 0.85);
+  border: 1.2px solid rgba(212, 175, 55, 0.5);
+  color: var(--color-gold-bright);
+  font-family: var(--font-royal);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 10006;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7), 0 0 15px rgba(212, 175, 55, 0.2);
+  transition: all 0.3s ease;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.floating-music-btn:hover {
+  background: rgba(14, 26, 68, 0.95);
+  border-color: var(--color-gold-bright);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85), 0 0 25px rgba(212, 175, 55, 0.4);
+  transform: translateY(-2px);
+}
+
+.floating-music-btn:active {
+  transform: scale(0.96);
+}
+
+/* Sound Wave Equalizer Bars */
+.music-wave-bars {
+  display: inline-flex;
+  align-items: center;
+  gap: 2.5px;
+  height: 14px;
+}
+
+.music-bar {
+  width: 2.5px;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #FFE89E 0%, #00D2FF 100%);
+  transform-origin: bottom;
+  transform: scaleY(0.25);
+  transition: transform 0.2s ease;
+}
+
+.bar-1 { height: 12px; }
+.bar-2 { height: 16px; }
+.bar-3 { height: 14px; }
+.bar-4 { height: 10px; }
+
+/* When Music is Actively Playing */
+.floating-music-btn.playing {
+  border-color: rgba(0, 210, 255, 0.65);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 210, 255, 0.35);
+}
+
+.floating-music-btn.playing .music-bar {
+  animation: musicWave 1.1s ease-in-out infinite alternate;
+}
+
+.floating-music-btn.playing .bar-1 { animation-delay: 0.1s; animation-duration: 0.9s; }
+.floating-music-btn.playing .bar-2 { animation-delay: 0.3s; animation-duration: 1.2s; }
+.floating-music-btn.playing .bar-3 { animation-delay: 0.0s; animation-duration: 0.8s; }
+.floating-music-btn.playing .bar-4 { animation-delay: 0.4s; animation-duration: 1.0s; }
+
+@keyframes musicWave {
+  0% { transform: scaleY(0.2); }
+  50% { transform: scaleY(1.0); }
+  100% { transform: scaleY(0.4); }
+}
+
+.music-label {
+  display: inline-block;
+  line-height: 1;
+}
+
+.back-to-top-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(7, 13, 36, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: var(--color-gold-bright);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9990;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+  transition: all 0.3s ease;
+}
+
+.back-to-top-btn.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.back-to-top-btn:hover {
+  background: rgba(17, 34, 91, 0.95);
+  border-color: var(--color-gold-bright);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+.toast-notification {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(50px);
+  background: rgba(11, 23, 59, 0.95);
+  border: 1px solid var(--color-gold-metallic);
+  color: #FFF;
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  z-index: 10005;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.toast-notification.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+/* ==========================================================================
+   13. RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 480px) {
+  .hero-cinematic-stage {
+    min-height: 540px;
+  }
+
+  .blue-butterfly-entity {
+    width: 48px;
+    height: 40px;
+  }
+
+  .story-chapter-section {
+    padding: 70px 16px 60px;
+  }
+
+  .countdown-dial-box {
+    padding: 12px 4px;
+  }
+
+  .timeline-journey-stream {
+    padding-left: 28px;
+  }
+
+  .timeline-path-line {
+    left: 12px;
+  }
+
+  .event-marker-dot {
+    left: -28px;
+    width: 26px;
+    height: 26px;
+    font-size: 12px;
+  }
+}

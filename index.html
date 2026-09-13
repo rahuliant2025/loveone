@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Rahul & Shristi — Cinematic Wedding Story</title>
+  <meta name="description" content="An interactive cinematic wedding film guided by the glowing blue butterfly celebrating the union of Rahul Patel & Shristi Singh on 11 December 2026." />
+
+  <!-- Google Fonts: Royal Serif, Spiritual Script & Modern Clean Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Core Design System & Cinematic Stylesheets -->
+  <link rel="stylesheet" href="css/design-system.css" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <!-- Mobile-First Cinematic Stage Shell -->
+  <div class="cinematic-stage-wrapper">
+
+    <!-- Cinematic Ambient Drifting Golden Fireflies Layer -->
+    <div class="ambient-fireflies-layer" id="ambientFireflies" aria-hidden="true">
+      <span class="firefly firefly-1"></span>
+      <span class="firefly firefly-2"></span>
+      <span class="firefly firefly-3"></span>
+      <span class="firefly firefly-4"></span>
+      <span class="firefly firefly-5"></span>
+      <span class="firefly firefly-6"></span>
+      <span class="firefly firefly-7"></span>
+      <span class="firefly firefly-8"></span>
+      <span class="firefly firefly-9"></span>
+      <span class="firefly firefly-10"></span>
+      <span class="firefly firefly-11"></span>
+      <span class="firefly firefly-12"></span>
+    </div>
+
+    <!-- Canvas for Real-Time Luminous Fairy Dust & Sparkle Trail Behind Butterfly -->
+    <canvas id="butterflySparkleCanvas" class="butterfly-sparkle-canvas"></canvas>
+
+    <!-- Cinematic Auspicious Falling Rose & Marigold Petals Layer (पुष्प वर्षा) -->
+    <div class="cinematic-petals-layer" id="cinematicPetals" aria-hidden="true">
+      <span class="petal petal-rose petal-1"></span>
+      <span class="petal petal-marigold petal-2"></span>
+      <span class="petal petal-rose petal-3"></span>
+      <span class="petal petal-marigold petal-4"></span>
+      <span class="petal petal-rose petal-5"></span>
+      <span class="petal petal-marigold petal-6"></span>
+      <span class="petal petal-rose petal-7"></span>
+      <span class="petal petal-marigold petal-8"></span>
+      <span class="petal petal-rose petal-9"></span>
+      <span class="petal petal-marigold petal-10"></span>
+      <span class="petal petal-rose petal-11"></span>
+      <span class="petal petal-marigold petal-12"></span>
+      <span class="petal petal-rose petal-13"></span>
+      <span class="petal petal-marigold petal-14"></span>
+      <span class="petal petal-rose petal-15"></span>
+      <span class="petal petal-marigold petal-16"></span>
+    </div>
+
+    <!-- Global Glowing Blue Butterfly Flight Stage (Follows scroll & perches on words) -->
+    <div class="butterfly-flight-stage" id="butterflyFlightStage" aria-hidden="true">
+      <div class="blue-butterfly-entity" id="glowingBlueButterfly" title="Rahul & Shristi's Glowing Blue Butterfly — Tap me!">
+        <div class="butterfly-wings-cage">
+          <svg class="blue-butterfly-svg" viewBox="0 0 100 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="blueWingGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFFFFF" />
+                <stop offset="15%" stop-color="#E0F7FF" />
+                <stop offset="45%" stop-color="#00D2FF" />
+                <stop offset="80%" stop-color="#0066FF" />
+                <stop offset="100%" stop-color="#05153A" />
+              </linearGradient>
+              <linearGradient id="blueWingGradient2" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#FFFFFF" />
+                <stop offset="15%" stop-color="#E0F7FF" />
+                <stop offset="45%" stop-color="#00D2FF" />
+                <stop offset="80%" stop-color="#0066FF" />
+                <stop offset="100%" stop-color="#05153A" />
+              </linearGradient>
+              <filter id="blueButterflyGlow" x="-40%" y="-40%" width="180%" height="180%">
+                <feGaussianBlur stdDeviation="3.5" result="blur" />
+                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+              </filter>
+            </defs>
+
+            <!-- Left Wing -->
+            <g class="blue-wing-group blue-wing-left">
+              <!-- Forewing -->
+              <path d="M 50 42 C 38 20 10 4 3 16 C -4 26 6 52 28 55 C 39 56 46 50 50 42 Z" 
+                    fill="url(#blueWingGradient1)" stroke="#B3EFFF" stroke-width="1.3" filter="url(#blueButterflyGlow)" />
+              <!-- Neon Veins -->
+              <path d="M 50 42 C 38 30 18 20 6 22 M 36 32 C 22 36 12 42 10 46" 
+                    stroke="#E0F7FF" stroke-width="1" opacity="0.9" stroke-linecap="round" />
+              <!-- Hindwing -->
+              <path d="M 48 48 C 40 56 16 60 20 74 C 24 83 38 80 46 64 Z" 
+                    fill="url(#blueWingGradient1)" stroke="#B3EFFF" stroke-width="1.2" />
+              <!-- Sparkling Cyan Edge Gems -->
+              <circle cx="5" cy="18" r="1.5" fill="#FFFFFF" />
+              <circle cx="10" cy="36" r="1.4" fill="#FFFFFF" />
+              <circle cx="22" cy="76" r="1.5" fill="#B3EFFF" />
+            </g>
+
+            <!-- Right Wing -->
+            <g class="blue-wing-group blue-wing-right">
+              <!-- Forewing -->
+              <path d="M 50 42 C 62 20 90 4 97 16 C 104 26 94 52 72 55 C 61 56 54 50 50 42 Z" 
+                    fill="url(#blueWingGradient2)" stroke="#B3EFFF" stroke-width="1.3" filter="url(#blueButterflyGlow)" />
+              <!-- Neon Veins -->
+              <path d="M 50 42 C 62 30 82 20 94 22 M 64 32 C 78 36 88 42 90 46" 
+                    stroke="#E0F7FF" stroke-width="1" opacity="0.9" stroke-linecap="round" />
+              <!-- Hindwing -->
+              <path d="M 52 48 C 60 56 84 60 80 74 C 76 83 62 80 54 64 Z" 
+                    fill="url(#blueWingGradient2)" stroke="#B3EFFF" stroke-width="1.2" />
+              <!-- Sparkling Cyan Edge Gems -->
+              <circle cx="95" cy="18" r="1.5" fill="#FFFFFF" />
+              <circle cx="90" cy="36" r="1.4" fill="#FFFFFF" />
+              <circle cx="78" cy="76" r="1.5" fill="#B3EFFF" />
+            </g>
+
+            <!-- Butterfly Central Luminescent Body & Antennae -->
+            <g class="butterfly-center-spine">
+              <!-- Glowing Antennae -->
+              <path d="M 49 32 C 45 20 37 12 33 10" stroke="#E0F7FF" stroke-width="1.4" stroke-linecap="round" />
+              <circle cx="32" cy="10" r="1.6" fill="#FFFFFF" />
+              <path d="M 51 32 C 55 20 63 12 67 10" stroke="#E0F7FF" stroke-width="1.4" stroke-linecap="round" />
+              <circle cx="68" cy="10" r="1.6" fill="#FFFFFF" />
+              <!-- Core Glowing Head & Thorax -->
+              <circle cx="50" cy="34" r="2.8" fill="#E0F7FF" />
+              <ellipse cx="50" cy="46" rx="2" ry="12" fill="#00D2FF" filter="url(#blueButterflyGlow)" />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==============================================
+         CINEMATIC HERO STAGE (GOOGLE OMNI VIDEO)
+         ============================================== -->
+    <main class="hero-cinematic-stage" id="heroStage">
+      
+      <!-- Omni Hero Cinematic Video Player -->
+      <div class="hero-video-container" id="heroVideoContainer">
+        <video 
+          id="heroOmniVideo" 
+          class="hero-omni-video" 
+          playsinline 
+          webkit-playsinline 
+          muted 
+          autoplay 
+          preload="auto"
+          aria-label="Cinematic wedding introduction featuring Rahul and the glowing blue butterfly">
+          <source src="hero_omni_groom.mp4" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+        
+        <!-- Video Ambient Lights & Lighting Orbs -->
+        <div class="hero-ambient-lights" aria-hidden="true">
+          <div class="ambient-orb ambient-orb-top"></div>
+          <div class="ambient-orb ambient-orb-warm"></div>
+        </div>
+
+        <!-- Video Vignette & Bottom Blending Gradient (Smoothly hides AI text artifact) -->
+        <div class="hero-video-vignette" aria-hidden="true"></div>
+        <div class="hero-bottom-blend-gradient" aria-hidden="true"></div>
+      </div>
+
+      <!-- Hero Interactive Scroll Cue & Sound Notice -->
+      <div class="hero-interactive-overlay" id="heroInteractiveOverlay">
+        <p class="hero-couple-subtitle">॥ बुद्धं शरणं गच्छामि · शुभ विवाह ॥</p>
+        <a class="hero-scroll-cue" href="#weddingStory" id="scrollStoryCue">
+          <span class="scroll-cue-text">Scroll to view our <span class="butterfly-perch-word">wedding story</span></span>
+          <span class="scroll-cue-arrow" aria-hidden="true">↓</span>
+        </a>
+      </div>
+
+    </main>
+
+    <!-- ==============================================
+         CHAPTER 2.1 — THE SACRED UNION & HARMONY
+         ============================================== -->
+    <section class="story-chapter-section" id="weddingStory">
+      <!-- Faded Romantic Glimpse of Rahul & Shristi Holding Hands with Sacred Bouquet -->
+      <div class="section-faded-glimpse" style="background-image: url('assets/couple/couple_vignette_duotone.png');" aria-hidden="true"></div>
+      
+      <div class="chapter-badge">✦ Sacred Harmony ✦</div>
+      <h2 class="chapter-title">Where Calm Meets <span class="butterfly-perch-word">Celebration</span></h2>
+      <p class="chapter-lead">
+        A sublime union honoring serene grace, wisdom, and eternal togetherness in the noble light of Dhamma and sacred family blessings.
+      </p>
+
+      <!-- Royal Romantic Couple Portrait Medallion (Rahul ❤️ Shristi) -->
+      <div class="royal-couple-portrait-medallion">
+        <div class="medallion-frame-outer">
+          <div class="medallion-glow-aura"></div>
+          <div class="medallion-frame-inner">
+            <img src="assets/couple/wedding_moment.jpg" alt="Rahul Patel & Shristi Singh" class="medallion-portrait-img" />
+            <div class="medallion-warm-vignette"></div>
+          </div>
+          <div class="medallion-crest-badge">☸</div>
+        </div>
+        <div class="medallion-caption">
+          <span class="medallion-shubh-tag">✦ शुभ विवाह · Shubh Vivah ✦</span>
+          <h3 class="medallion-couple-title">Rahul <span class="gold-heart">❤️</span> Shristi</h3>
+          <p class="medallion-blessing-line">“Two souls united in love, guided by the timeless light of Dhamma”</p>
+        </div>
+      </div>
+
+      <div class="harmony-cards-grid">
+        <!-- Dhamma Grace -->
+        <article class="royal-glass-card">
+          <div class="card-icon-crest">☸</div>
+          <h3 class="card-title">Dhamma <span class="butterfly-perch-word">Grace</span></h3>
+          <p class="card-tagline">Wisdom · Serenity · Trisharan</p>
+          <p class="card-body-text">
+            Inspired by the timeless teachings of the Buddha and the noble guidance of Babasaheb Ambedkar. Blessed with white lotus petals, Trisharan, Panchsheel vows, and compassionate peace.
+          </p>
+          <div class="card-mantra-pill">मंगलं बुद्धं · मंगलं धम्मं · मंगलं संघं</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         CHAPTER 2.2 — THE FAMILY BLESSINGS
+         ============================================== -->
+    <section class="story-chapter-section" id="familySection">
+      <!-- Faded Ambient Family Blessings Glimpse -->
+      <div class="section-faded-glimpse" style="background-image: url('assets/couple/wedding_moment.jpg'); opacity: 0.10;" aria-hidden="true"></div>
+
+      <div class="chapter-badge">✦ Blessed by Elders ✦</div>
+      <h2 class="chapter-title">Two Families, <span class="butterfly-perch-word">One Heart</span></h2>
+      <p class="chapter-lead">
+        With the divine blessings of our ancestors and the heartfelt love of our parents:
+      </p>
+
+      <div class="family-pillars-grid">
+        <!-- Groom Family -->
+        <div class="family-pillar-card">
+          <span class="family-pillar-label">Groom's Parents · वर पक्ष</span>
+          <h4 class="family-parents-names">Smt. Geeta Patel<br>&amp; Shri <span class="butterfly-perch-word">Bhojraj Patel</span></h4>
+          <p class="family-home-note">Patel Family · Bilaspur, Chhattisgarh</p>
+        </div>
+
+        <div class="family-center-emblem" aria-hidden="true">✦ ❤️ ✦</div>
+
+        <!-- Bride Family -->
+        <div class="family-pillar-card">
+          <span class="family-pillar-label">Bride's Parents · वधू पक्ष</span>
+          <h4 class="family-parents-names">Smt. Nirmala Singh<br>&amp; Shri <span class="butterfly-perch-word">Amin Singh</span></h4>
+          <p class="family-home-note">Singh Family · Bilaspur, Chhattisgarh</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         CHAPTER 2.3 — WEDDING CELEBRATIONS TIMELINE
+         ============================================== -->
+    <section class="story-chapter-section" id="timelineSection">
+      <!-- Faded Bride & Groom Framing Glimpses on sides -->
+      <div class="timeline-glimpse-bride" style="background-image: url('assets/bride/bride_glimpse.png');" aria-hidden="true"></div>
+      <div class="timeline-glimpse-groom" style="background-image: url('assets/groom/groom_glimpse.png');" aria-hidden="true"></div>
+
+      <div class="chapter-badge">✦ Auspicious Itinerary ✦</div>
+      <h2 class="chapter-title">Wedding <span class="butterfly-perch-word">Celebrations</span></h2>
+      <p class="chapter-lead">Five sacred milestones. One unforgettable journey.</p>
+
+      <div class="timeline-journey-stream">
+        <div class="timeline-path-line" aria-hidden="true"></div>
+
+        <!-- 1. Haldi -->
+        <div class="timeline-event-card">
+          <div class="event-marker-dot">🌼</div>
+          <div class="event-card-inner">
+            <span class="event-time-badge">10 Dec 2026 · 10:00 AM</span>
+            <h3 class="event-name"><span class="butterfly-perch-word">Haldi</span> Ceremony (हल्दी उत्सव)</h3>
+            <p class="event-desc">Golden ubtan, fragrant marigolds, playful laughter, and traditional wedding songs.</p>
+            <div class="event-actions">
+              <span class="event-venue-pill">📍 Pallav Bhawan, Bilaspur</span>
+              <button class="cal-sync-btn" onclick="addToGoogleCalendar('Haldi - Rahul &amp; Shristi Wedding', '20261210T100000', '20261210T130000', 'Pallav Bhawan, Ring Road 2, Gaurav Path, Bilaspur', 'Haldi Ceremony of Rahul Patel &amp; Shristi Singh')">📅 Add to Calendar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Mehendi -->
+        <div class="timeline-event-card">
+          <div class="event-marker-dot">🌿</div>
+          <div class="event-card-inner">
+            <span class="event-time-badge">10 Dec 2026 · 04:00 PM</span>
+            <h3 class="event-name"><span class="butterfly-perch-word">Mehendi</span> Ki Raat (मेहंदी की रंगत)</h3>
+            <p class="event-desc">Intricate bridal henna designs, sweet melodies, and cherished family moments.</p>
+            <div class="event-actions">
+              <span class="event-venue-pill">📍 Pallav Bhawan, Bilaspur</span>
+              <button class="cal-sync-btn" onclick="addToGoogleCalendar('Mehendi - Rahul &amp; Shristi Wedding', '20261210T160000', '20261210T190000', 'Pallav Bhawan, Ring Road 2, Gaurav Path, Bilaspur', 'Mehendi Ceremony of Rahul Patel &amp; Shristi Singh')">📅 Add to Calendar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Sangeet -->
+        <div class="timeline-event-card">
+          <div class="event-marker-dot">🪕</div>
+          <div class="event-card-inner">
+            <span class="event-time-badge">10 Dec 2026 · 08:00 PM</span>
+            <h3 class="event-name"><span class="butterfly-perch-word">Sangeet</span> Celebration (संगीत संध्या)</h3>
+            <p class="event-desc">A vibrant musical gala with energetic dholak beats, heartfelt melodies, and joyful family dance performances.</p>
+            <div class="event-actions">
+              <span class="event-venue-pill">📍 Pallav Bhawan, Bilaspur</span>
+              <button class="cal-sync-btn" onclick="addToGoogleCalendar('Sangeet - Rahul &amp; Shristi Wedding', '20261210T200000', '20261210T233000', 'Pallav Bhawan, Ring Road 2, Gaurav Path, Bilaspur', 'Sangeet Night of Rahul Patel &amp; Shristi Singh')">📅 Add to Calendar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Auspicious Vivah Sanskar (Main Event) -->
+        <div class="timeline-event-card wedding-main-highlight">
+          <div class="event-marker-dot crown-dot">☸</div>
+          <div class="event-card-inner highlight-glow">
+            <div class="auspicious-ribbon">Auspicious Vivah Sanskar</div>
+            <span class="event-time-badge gold-highlight">11 Dec 2026 · 09:00 AM onwards</span>
+            <h3 class="event-name gold-title">Wedding <span class="butterfly-perch-word">Ceremony</span> (शुभ विवाह संस्कार)</h3>
+            <p class="event-desc">
+              Sacred Buddhist rituals, Trisharan &amp; Panchsheel recitation, Mangalashtak, and solemn vows as Rahul &amp; Shristi unite forever.
+            </p>
+            <div class="event-actions">
+              <span class="event-venue-pill gold-pill">📍 Buddh Vihar, Magarpara, Bilaspur</span>
+              <button class="cal-sync-btn primary-cal-btn" onclick="addToGoogleCalendar('Wedding Ceremony - Rahul &amp; Shristi', '20261211T090000', '20261211T133000', 'Buddh Vihar, Magarpara, Bilaspur', 'Sacred Wedding Ceremony of Rahul Patel &amp; Shristi Singh')">📅 Add to Calendar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Grand Reception -->
+        <div class="timeline-event-card">
+          <div class="event-marker-dot">✨</div>
+          <div class="event-card-inner">
+            <span class="event-time-badge">11 Dec 2026 · 08:00 PM onwards</span>
+            <h3 class="event-name">Grand <span class="butterfly-perch-word">Reception</span> (प्रीतिभोज)</h3>
+            <p class="event-desc">A grand evening banquet, felicitation, and celebration feast with all family and friends.</p>
+            <div class="event-actions">
+              <span class="event-venue-pill">📍 Pallav Bhawan, Bilaspur</span>
+              <button class="cal-sync-btn" onclick="addToGoogleCalendar('Grand Reception - Rahul &amp; Shristi Wedding', '20261211T200000', '20261211T235900', 'Pallav Bhawan, Ring Road 2, Gaurav Path, Bilaspur', 'Wedding Reception of Rahul Patel &amp; Shristi Singh')">📅 Add to Calendar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         CHAPTER 2.4 — CELEBRATION VENUES & GPS MAPS
+         ============================================== -->
+    <section class="story-chapter-section" id="venuesSection">
+      <!-- Faded Mandap Background -->
+      <div class="section-faded-glimpse" style="background-image: url('mandap_bg.jpg'); opacity: 0.12;" aria-hidden="true"></div>
+
+      <div class="chapter-badge">✦ Locations &amp; Navigation ✦</div>
+      <h2 class="chapter-title">Celebration <span class="butterfly-perch-word">Venues</span></h2>
+      <p class="chapter-lead">1-click GPS navigation links for both celebration venues</p>
+
+      <div class="venues-cards-grid">
+        <!-- Buddh Vihar -->
+        <article class="royal-glass-card venue-card">
+          <div class="venue-crest">☸</div>
+          <span class="venue-role-tag">Wedding Ceremony Venue</span>
+          <h3 class="venue-name"><span class="butterfly-perch-word">Buddh Vihar</span></h3>
+          <p class="venue-address">Magarpara, Bilaspur, Chhattisgarh</p>
+          <p class="venue-timing-note">Venue for Auspicious Vivah Sanskar on 11 Dec (09:00 AM)</p>
+          <a class="venue-map-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Buddh+Vihar+Magarpara+Bilaspur+Chhattisgarh">
+            <span>Open in Google Maps</span> ↗
+          </a>
+        </article>
+
+        <!-- Pallav Bhawan -->
+        <article class="royal-glass-card venue-card">
+          <div class="venue-crest">🏛</div>
+          <span class="venue-role-tag">Pre-Wedding &amp; Reception Venue</span>
+          <h3 class="venue-name"><span class="butterfly-perch-word">Pallav Bhawan</span></h3>
+          <p class="venue-address">Ring Road 2, Gaurav Path, Bilaspur, Chhattisgarh 495001</p>
+          <p class="venue-timing-note">Venue for Haldi, Mehendi, Sangeet &amp; Grand Reception</p>
+          <a class="venue-map-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Pallav+Bhawan+Ring+Road+2+Gaurav+Path+Bilaspur+Chhattisgarh+495001">
+            <span>Open in Google Maps</span> ↗
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         CHAPTER 2.5 — COUNTDOWN TO FOREVER
+         ============================================== -->
+    <section class="story-chapter-section" id="countdownSection">
+      <!-- Faded Couple Moment Glimpse -->
+      <div class="section-faded-glimpse" style="background-image: url('assets/couple/wedding_moment.jpg'); opacity: 0.14;" aria-hidden="true"></div>
+
+      <div class="chapter-badge">✦ Ticking Down ✦</div>
+      <h2 class="chapter-title">Counting Down to <span class="butterfly-perch-word">Forever</span></h2>
+      <p class="chapter-lead">Until Rahul &amp; Shristi tie the eternal sacred knot</p>
+
+      <div class="countdown-dials-grid" id="countdown">
+        <div class="countdown-dial-box">
+          <span class="dial-number" id="days">00</span>
+          <span class="dial-label">DAYS</span>
+        </div>
+        <div class="countdown-dial-box">
+          <span class="dial-number" id="hours">00</span>
+          <span class="dial-label">HOURS</span>
+        </div>
+        <div class="countdown-dial-box">
+          <span class="dial-number" id="mins">00</span>
+          <span class="dial-label">MINS</span>
+        </div>
+        <div class="countdown-dial-box">
+          <span class="dial-number" id="secs">00</span>
+          <span class="dial-label">SECS</span>
+        </div>
+      </div>
+
+      <p class="countdown-date-badge">Friday · 11 December 2026 · Bilaspur (C.G.)</p>
+    </section>
+
+    <!-- ==============================================
+         CHAPTER 2.6 — RSVP & WHATSAPP BLESSINGS
+         ============================================== -->
+    <section class="story-chapter-section" id="rsvpSection">
+      <div class="chapter-badge">✦ RSVP &amp; Blessings ✦</div>
+      <h2 class="chapter-title">Send a <span class="butterfly-perch-word">Message</span></h2>
+      <p class="chapter-lead">Send your heartfelt congratulations directly to Rahul &amp; Shristi on WhatsApp!</p>
+
+      <div class="rsvp-form-container">
+        <form class="royal-rsvp-form" id="rsvpForm" onsubmit="sendWishesToWhatsApp(event)">
+          <div class="form-row">
+            <label for="guestName">Your Full Name *</label>
+            <input type="text" id="guestName" placeholder="e.g. Anand &amp; Family" required />
+          </div>
+
+          <div class="form-row">
+            <label for="guestAttendance">Will you be attending?</label>
+            <select id="guestAttendance">
+              <option value="Yes, joyfully attending all events!">Yes, joyfully attending with heart!</option>
+              <option value="Yes, attending Wedding &amp; Reception">Attending Wedding &amp; Reception</option>
+              <option value="Attending with full family">Attending with entire family</option>
+              <option value="Sending blessings in spirit">Regretfully unable, but sending warmest blessings!</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="guestCount">Number of Guests</label>
+            <select id="guestCount">
+              <option value="1">1 Person</option>
+              <option value="2" selected>2 Persons</option>
+              <option value="3 to 4">3 - 4 Family Members</option>
+              <option value="5+">5+ Family Members</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="guestMessage">Your Blessings / Message</label>
+            <textarea id="guestMessage" rows="3" placeholder="Write your warm blessings for Rahul &amp; Shristi..."></textarea>
+          </div>
+
+          <button type="submit" class="whatsapp-send-btn">
+            <span>💬 Send Blessings on WhatsApp</span>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         CHAPTER 2.7 — WHATSAPP INVITATION FORWARD
+         ============================================== -->
+    <section class="story-chapter-section" id="shareSection">
+      <div class="share-utility-card">
+        <span class="share-icon">📲</span>
+        <h3 class="share-title">Share this <span class="butterfly-perch-word">Invitation</span> with Family</h3>
+        <p class="share-desc">Easily forward this royal invitation card and live link to relatives and friends on WhatsApp:</p>
+
+        <div class="share-actions-row">
+          <button class="share-btn primary-share-btn" onclick="shareOnWhatsApp()">
+            <span>Forward on WhatsApp</span> 🚀
+          </button>
+          <a class="share-btn secondary-share-btn" href="whatsapp_invite_card.png" download="Rahul_Shristi_Wedding_Invite.png">
+            <span>Download Invite Card</span> 📥
+          </a>
+        </div>
+
+        <p class="copy-hint" id="copyHint">Or tap below to copy invitation text to clipboard</p>
+        <button class="copy-message-btn" onclick="copyInviteText()">📋 Copy Formatted WhatsApp Message</button>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         CHAPTER 2.8 — CLOSING ROYAL BLESSING
+         ============================================== -->
+    <footer class="closing-royal-footer" id="closingSection">
+      <!-- Faded Hand-in-Hand Silhouette Glimpse -->
+      <div class="section-faded-glimpse" style="background-image: url('assets/couple/couple_vignette_duotone.png'); opacity: 0.12;" aria-hidden="true"></div>
+
+      <span class="closing-dhamma-crest">☸</span>
+      <p class="closing-pali-verse">॥ मंगलं बुद्धं · मंगलं धम्मं · मंगलं संघं ॥</p>
+      <h2 class="closing-headline">Your Presence<br>is our Greatest <span class="butterfly-perch-word">Blessing</span></h2>
+      <p class="closing-subtext">
+        Come celebrate a sacred bond where two families and two hearts unite into one eternal journey of love.
+      </p>
+
+      <div class="closing-names-signature">
+        <span class="butterfly-perch-word">Rahul</span> <i>&amp;</i> <span class="butterfly-perch-word">Shristi</span>
+      </div>
+
+      <p class="closing-date-mark">11 · 12 · 2026 · Bilaspur, Chhattisgarh</p>
+
+      <div class="closing-family-compliments">
+        <p>With Warm Regards &amp; Compliments:</p>
+        <strong>Patel Family &amp; Singh Family</strong>
+      </div>
+
+      <div class="made-by-rahul-credit">
+        <span>Made by Rahul with <span class="heart-pulse">❤️</span></span>
+      </div>
+    </footer>
+
+  </div> <!-- End .cinematic-stage-wrapper -->
+
+  <!-- Floating Cinematic Music Control (Ranjha — Background Score) -->
+  <button id="musicToggleBtn" class="floating-music-btn" aria-label="Toggle Wedding Music" aria-pressed="false" title="Wedding Music: Ranjha">
+    <span class="music-wave-bars" aria-hidden="true">
+      <span class="music-bar bar-1"></span>
+      <span class="music-bar bar-2"></span>
+      <span class="music-bar bar-3"></span>
+      <span class="music-bar bar-4"></span>
+    </span>
+    <span class="music-label">MUSIC</span>
+  </button>
+
+  <!-- Floating Back-to-Top Button -->
+  <button id="backToTopBtn" class="back-to-top-btn" aria-label="Back to Top" onclick="scrollToTop()">
+    <span>↑</span>
+  </button>
+
+  <!-- Interactive Toast Notification -->
+  <div id="toastMessage" class="toast-notification" aria-live="polite"></div>
+
+  <!-- GSAP & ScrollTrigger Animation Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <!-- Project Architecture Scripts -->
+  <script src="js/music-engine.js"></script>
+  <script src="js/butterfly-engine.js"></script>
+  <script src="js/cinematic-timeline.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
