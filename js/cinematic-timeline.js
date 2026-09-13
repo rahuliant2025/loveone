@@ -260,7 +260,6 @@ class CinematicTimelineController {
       { selector: '#familySection', volume: this.musicEngine.VOLUMES.FAMILY },
       { selector: '#venuesSection', volume: this.musicEngine.VOLUMES.VENUES },
       { selector: '#countdownSection', volume: this.musicEngine.VOLUMES.COUNTDOWN },
-      { selector: '#rsvpSection', volume: this.musicEngine.VOLUMES.SCROLL_DEFAULT },
       { selector: '#shareSection', volume: this.musicEngine.VOLUMES.SCROLL_DEFAULT }
     ];
 
@@ -280,13 +279,12 @@ class CinematicTimelineController {
       if (el) observer.observe(el);
     });
 
-    // Detailed Timeline Milestones Observer (Haldi, Mehendi, Sangeet, Wedding Ceremony, Reception)
+    // Detailed Timeline Milestones Observer (Haldi, Sangeet, Wedding Ceremony, Reception)
     const timelineCards = [
       { query: '.timeline-event-card:nth-of-type(1)', vol: this.musicEngine.VOLUMES.HALDI },     // Haldi: 17%
-      { query: '.timeline-event-card:nth-of-type(2)', vol: this.musicEngine.VOLUMES.MEHENDI },   // Mehendi: 17%
-      { query: '.timeline-event-card:nth-of-type(3)', vol: this.musicEngine.VOLUMES.SANGEET },   // Sangeet: 20%
+      { query: '.timeline-event-card:nth-of-type(2)', vol: this.musicEngine.VOLUMES.SANGEET },   // Sangeet: 20%
       { query: '.wedding-main-highlight', vol: this.musicEngine.VOLUMES.CEREMONY },              // Vivah Sanskar Climax: 26%
-      { query: '.timeline-event-card:nth-of-type(5)', vol: this.musicEngine.VOLUMES.RECEPTION }  // Reception: 19%
+      { query: '.timeline-event-card:nth-of-type(4)', vol: this.musicEngine.VOLUMES.RECEPTION }  // Reception: 19%
     ];
 
     const cardObserver = new IntersectionObserver((entries) => {

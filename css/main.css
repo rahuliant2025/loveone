@@ -863,6 +863,92 @@
 }
 
 /* ==========================================================================
+   BAL MANUHAAR (CUTE NIECE & NEPHEW INVITATION - YESHU & RESHU)
+   ========================================================================== */
+.bal-manuhaar-card {
+  width: 100%;
+  max-width: 440px;
+  margin: 28px auto 8px;
+  padding: 24px 20px;
+  background: linear-gradient(145deg, rgba(16, 26, 60, 0.85) 0%, rgba(8, 14, 38, 0.95) 100%);
+  border: 1.5px solid rgba(212, 175, 55, 0.35);
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), 
+              0 0 25px rgba(255, 105, 135, 0.15), 
+              inset 0 0 20px rgba(212, 175, 55, 0.08);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  backdrop-filter: blur(10px);
+}
+
+.bal-manuhaar-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FF758C, #FFD700, transparent);
+}
+
+.bal-manuhaar-badge {
+  display: inline-block;
+  font-family: var(--font-royal);
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #FFB3C1;
+  background: rgba(255, 105, 135, 0.14);
+  border: 1px solid rgba(255, 179, 193, 0.3);
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.bal-manuhaar-heading {
+  font-family: var(--font-royal);
+  font-size: clamp(18px, 4.8vw, 22px);
+  line-height: 1.45;
+  color: #FFE082;
+  margin-bottom: 12px;
+  text-shadow: 0 0 14px rgba(255, 215, 0, 0.4);
+}
+
+.bal-manuhaar-body {
+  font-family: var(--font-serif);
+  font-size: clamp(15px, 3.8vw, 17px);
+  line-height: 1.7;
+  color: #F3E8FF;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.bal-manuhaar-signature {
+  border-top: 1px dashed rgba(255, 182, 193, 0.25);
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bal-manuhaar-signature .waiting-text {
+  font-size: 13px;
+  color: #FFD2DC;
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+.bal-manuhaar-signature .kids-names {
+  font-family: var(--font-royal);
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  color: #FFE082;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+/* ==========================================================================
    6. CHAPTER 2.3 — CELEBRATIONS TIMELINE STREAM
    ========================================================================== */
 .timeline-journey-stream {
@@ -985,6 +1071,33 @@
   line-height: 1.55;
   color: var(--color-text-secondary);
   margin-bottom: 12px;
+}
+
+.reception-invitation-quote {
+  margin: 14px 0 16px;
+  padding: 14px 16px;
+  background: rgba(212, 175, 55, 0.08);
+  border-left: 3px solid var(--color-gold-bright);
+  border-radius: 0 12px 12px 0;
+  text-align: left;
+}
+
+.reception-invitation-quote p {
+  font-family: var(--font-serif);
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #FFF2CC;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.reception-invitation-quote strong {
+  display: block;
+  font-family: var(--font-royal);
+  font-size: 13px;
+  color: var(--color-gold-bright);
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.35);
 }
 
 .event-actions {
